@@ -17,8 +17,6 @@
   gap: 65px;
   min-height: 668px;
 }
-.decorated-zone {
-}
 .decorated-corner::before,
 .decorated-corner::after {
   content: "";
@@ -232,6 +230,7 @@ main {
   align-items: center;
   position: relative;
   min-height: 668px;
+  height: 100vh;
 }
 .footer_content {
   text-align: center;
