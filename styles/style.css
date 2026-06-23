@@ -9,11 +9,15 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-.decorated-zone {
+.header {
+  position: relative;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr auto auto;
-  gap: 55px;
+  grid-template-rows: 1fr min-content 1fr;
+  gap: 65px;
+  min-height: 668px;
+}
+.decorated-zone {
 }
 .decorated-corner::before,
 .decorated-corner::after {
@@ -44,7 +48,7 @@
   font-style: normal;
   font-size: 18px;
   line-height: 25px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   text-align: center;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -68,14 +72,49 @@
   margin-top: 75px;
   margin-right: 10px;
 }
+.header__theme-menu-list {
+  gap: 10px;
+}
 .header__theme-menu-item {
   margin-bottom: 10px;
 }
 .header__theme-menu-item:last-child {
   margin-bottom: 0px;
 }
+.header__theme-menu-button {
+  all: unset;
+  max-width: 70px;
+  font-family: var(--font-family), "Gill Sans", "Gill Sans MT", sans-serif;
+  color: var(--button-color);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1.5px 13px;
+  padding-bottom: 4px;
+  text-transform: lowercase;
+}
+.header__theme-menu-button:default {
+  outline: 1px solid var(--button-color);
+}
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-color-transparent);
+}
+.header__theme-menu-button:focus {
+  outline: none;
+}
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--button-color);
+}
+.header__theme-menu-button_active {
+  outline: 1px solid var(--button-color);
+}
 .header_title {
-  margin-top: 10px;
   justify-self: start;
   align-items: center;
   font-family: var(--font-family, sans-serif);
@@ -83,23 +122,25 @@
   font-style: normal;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   color: var(--title-color);
+  margin-left: 10px;
+  margin-right: 10px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 .header_description {
-  margin-bottom: 66px;
+  margin-left: 10px;
+  margin-right: 10px;
   justify-self: end;
   align-items: center;
   max-width: 355px;
   display: inline;
-
   font-family: var(--font-family, sans-serif);
   font-weight: 700;
   font-style: normal;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 .title-decor {
   background-color: var(--article-bg-color);
@@ -125,15 +166,13 @@ main {
   font-style: normal;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   max-width: 355px;
 }
 .card {
   margin-bottom: 20px;
 }
-.card:last-child {
-  margin-bottom: 0px;
-}
+
 .card_title {
   margin-bottom: 10px;
   font-family: var(--font-family, "Optima", sans-serif);
@@ -141,7 +180,7 @@ main {
   font-style: normal;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 .card_title_weight {
   margin-bottom: 10px;
@@ -149,7 +188,7 @@ main {
   font-style: normal;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   font-weight: 400;
 }
 .card_text {
@@ -159,7 +198,7 @@ main {
   font-style: normal;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 .text_link {
   text-decoration: none;
@@ -191,8 +230,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   position: relative;
+  min-height: 668px;
 }
 .footer_content {
   text-align: center;
@@ -201,44 +240,11 @@ main {
   font-family: var(--font-family, "Arial Narrow", sans-serif);
   font-weight: 700;
   font-style: normal;
-  font-size: 7.25rem;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
-}
-button {
-  all: unset;
-  max-width: 70px;
-  font-family: var(--font-family), "Gill Sans", "Gill Sans MT", sans-serif;
-  color: var(--button-color);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  text-align: center;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 1.5px 13px;
-  text-transform: lowercase;
-}
-button:default {
-  outline: 1px solid var(--button-color);
-}
-button:hover {
-  outline: 1px solid var(--button-color);
-}
-button:active {
-  outline: 1px solid var(--button-color);
-}
-button:focus {
-  outline: none;
-  border-bottom: 1px solid var(--button-color);
-}
-button:focus-visible {
-  outline: none;
-  border-bottom: 1px solid var(--button-color);
 }
 
 @media (width >= 768px) {
@@ -254,6 +260,9 @@ button:focus-visible {
     top: 20px;
     right: 48px;
   }
+  .header {
+    gap: 162px;
+  }
   .header__theme-menu {
     margin-top: 192px;
   }
@@ -262,10 +271,11 @@ button:focus-visible {
   }
   .header_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-bottom: 162px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .header_description {
-    margin-bottom: 183px;
+    margin-right: 20px;
   }
   .content {
     margin-top: 60px;
@@ -275,6 +285,8 @@ button:focus-visible {
   }
   .article {
     margin-bottom: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .article-row {
     display: grid;
@@ -289,22 +301,25 @@ button:focus-visible {
   }
   .article-column {
     grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
   }
   .article-row .article_title {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: span 1;
-    margin-top: -30px;
+    margin-top: -50px;
   }
   .article-row .card_title {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: span 1;
+    margin-bottom: 20px;
   }
   .gallery {
     display: grid;
+    margin-top: 10px;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -331,6 +346,9 @@ button:focus-visible {
     grid-column-start: 2;
     grid-column-end: span 2;
   }
+  .footer_content span {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
 @media (width >= 1024px) {
   .decorated-corner::before {
@@ -345,14 +363,14 @@ button:focus-visible {
     top: 20px;
     right: 48px;
   }
+  .header {
+    gap: 114px;
+  }
   .header_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-top: 273px;
   }
   .header_description {
     max-width: 491px;
-    margin-bottom: 134px;
-    margin-top: 114px;
   }
   .header__theme-menu {
     justify-self: center;
@@ -361,7 +379,6 @@ button:focus-visible {
   .header__theme-menu-list {
     display: flex;
   }
-
   .content {
     margin-top: 60px;
   }
@@ -375,6 +392,7 @@ button:focus-visible {
   }
   .article-column {
     grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
   }
   .article_title {
     max-width: 315px;
@@ -395,13 +413,14 @@ button:focus-visible {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: span 1;
-    margin-top: -30px;
+    margin-top: -50px;
   }
   .article-row .card_title {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: span 1;
+    margin-bottom: 20px;
   }
   .card_list {
     display: grid;
@@ -436,40 +455,5 @@ button:focus-visible {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: span 2;
-  }
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-image: url("../images/cover-image-light.png");
-    --bg-color: #fff1f7;
-    --title-color: #ffc2e6;
-    --font-family: "IBM Plex mono";
-    --accent-color: #ff8dcb;
-    --link-color: #353430;
-    --article-title-color: #353430;
-    --article-text-color: #353430;
-    --button-color: #353430;
-    --text-color: #353430;
-    --article-bg-color: #ff8dcb;
-    --corner-color: #353430;
-    --decorative-rec-display: none;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-image: url("../images/cover-image-dark.png");
-    --bg-color: #000028;
-    --title-color: #db00ff;
-    --font-family: "IBM Plex mono";
-    --accent-color: #ff0070;
-    --link-color: #f1b2ce;
-    --article-title-color: #ff0070;
-    --article_text-color: #000028;
-    --button-color: #ff0070;
-    --text-color: #f1b2ce;
-    --article-bg-color: #ff0070;
-    --corner-color: #ff0070;
-    --decorative-rec-display: block;
   }
 }

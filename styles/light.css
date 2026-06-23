@@ -18,8 +18,28 @@
   --article-title-color: #353430;
   --article-text-color: #353430;
   --button-color: #353430;
+  --button-color-transparent: #35343066;
   --text-color: #353430;
   --article-bg-color: #ff8dcb;
   --corner-color: #353430;
   --decorative-rec-display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url("../images/cover-image-light.png");
+    --bg-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --font-family: "IBM Plex mono";
+    --accent-color: #ff8dcb;
+    --link-color: #353430;
+    --article-title-color: #353430;
+    --article-text-color: #353430;
+    --button-color: #353430;
+    --button-color-transparent: #35343066;
+    --text-color: #353430;
+    --article-bg-color: #ff8dcb;
+    --corner-color: #353430;
+    --decorative-rec-display: none;
+  }
 }

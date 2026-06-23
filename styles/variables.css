@@ -13,8 +13,10 @@
   --article-title-color: #ff0070;
   --article-text-color: #000028;
   --button-color: #ff0070;
+  --button-color-transparent: #ff007066;
   --text-color: #f1b2ce;
   --article-bg-color: #ff0070;
   --corner-color: #ff0070;
   --decorative-rec-display: block;
+  
 }
