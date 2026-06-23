@@ -287,6 +287,9 @@ main {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .article_title {
+    max-width: 236px;
+  }
   .article-row {
     display: grid;
     grid-template-columns: 1fr 2fr;
