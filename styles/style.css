@@ -177,8 +177,8 @@ main {
   letter-spacing: 0px;
 }
 .article-row .card_title {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
+}
 .card_title_weight {
   margin-bottom: 10px;
   font-family: var(--font-family, "Optima", sans-serif);
@@ -262,8 +262,8 @@ main {
     gap: 162px;
   }
   .header__theme-menu {
-    margin-top: 192px;  
-    margin-right: 20px; 
+    margin-top: 192px;
+    margin-right: 20px;
   }
   .header_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
