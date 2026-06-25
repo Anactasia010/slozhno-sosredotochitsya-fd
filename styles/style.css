@@ -14,7 +14,7 @@
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  gap: 65px;
+  gap: 55px;
   min-height: 668px;
 }
 .decorated-corner::before,
@@ -70,11 +70,8 @@
   margin-top: 75px;
   margin-right: 10px;
 }
-.header__theme-menu-list {
-  gap: 10px;
-}
 .header__theme-menu-item {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 .header__theme-menu-item:last-child {
   margin-bottom: 0px;
@@ -150,7 +147,7 @@ main {
 .article {
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: grid;
 }
 .article:last-child {
@@ -265,10 +262,8 @@ main {
     gap: 162px;
   }
   .header__theme-menu {
-    margin-top: 192px;
-  }
-  .header__theme-menu-list {
-    margin-right: 10px;
+    margin-top: 192px;  
+    margin-right: 20px; 
   }
   .header_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -277,6 +272,7 @@ main {
   }
   .header_description {
     margin-right: 20px;
+    max-width: 364px;
   }
   .content {
     margin-top: 60px;
@@ -285,7 +281,7 @@ main {
     margin-bottom: 60px;
   }
   .article {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -312,7 +308,7 @@ main {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: span 1;
-    margin-top: -50px;
+    margin-top: -45px;
   }
   .article-row .card_title {
     grid-row-start: 1;
@@ -379,6 +375,10 @@ main {
   .header__theme-menu {
     justify-self: center;
     margin-top: 20px;
+    margin-left: 30px;
+  }
+  .header__theme-menu-item {
+    margin-right: 10px;
   }
   .header__theme-menu-list {
     display: flex;
@@ -390,13 +390,13 @@ main {
     margin-bottom: 60px;
   }
   .article {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     margin-left: 20px;
     margin-right: 20px;
   }
   .article-column {
     grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
+    column-gap: 10px;
   }
   .article_title {
     max-width: 315px;
@@ -417,7 +417,7 @@ main {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: span 1;
-    margin-top: -50px;
+    margin-top: -44px;
   }
   .article-row .card_title {
     grid-row-start: 1;
